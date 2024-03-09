@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Cairo&family=Metal+Mania&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .parent{
+            width:400px;
+        }
+        select{
+            width: 100%;
+            font-size: 20px;
+            padding: 5px;
+        }
+        .test{
+            background-color: #eee;
+            font-size: 22px;
+            padding: 12px;
+            text-align: center;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <select>
+            <option value="Open Sans">Open Sans</option>
+            <option value="Metal Mania">Metal Mania</option>
+            <option value="Caesar Dressing">Caesar</option>
+            <option value="Cairo">Cairo</option>
+        </select>
+        <div class="test">Testing Font Here</div>
+    </div>
+
+    <script>
+        let font=document.querySelector("select");
+        let text=document.querySelector(".test");
+        font.onchange=function(){
+            text.style.fontFamily=font.value;
+        }
+    </script>
+</body>
+</html>
