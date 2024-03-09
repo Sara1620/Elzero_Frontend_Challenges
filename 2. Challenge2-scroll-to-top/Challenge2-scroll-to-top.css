@@ -1,0 +1,21 @@
+html{
+    scroll-behavior: smooth; 
+}
+
+.container div{
+    margin-bottom: 300px;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+a{
+    background-color: red;
+    color:white;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
