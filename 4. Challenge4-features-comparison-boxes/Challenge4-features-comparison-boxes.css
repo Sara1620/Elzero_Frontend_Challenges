@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.object{
+    margin: 60px auto;
+    position: relative;
+    width: 800px;
+    height: 680px;
+    padding: 65px 20px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+span{
+    position: absolute;
+    top: 12px;
+    right: 85px;
+    width: fit-content;
+    padding: 10px;
+    background-color: #2196F3;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+span::before,
+span::after{
+    content: "";
+    position: absolute;
+    right: -40px;
+    border-left: 43px solid #2196F3;   
+}
+
+span::before{    
+    top:0;
+    border-bottom: 40px solid transparent;
+}
+
+span::after{
+    bottom: 0;
+    border-top: 37px solid transparent;
+}
+
+h2{
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.basic{
+    background-color: #F44336;
+}
+
+.professional{
+    background-color: #2196F3;
+} 
+
+.Basic, 
+.Professional{
+    background-color: white;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    font-size: 14px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.Basic div, 
+.Professional div{
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+
+.Basic div:not(:last-child), 
+.Professional div:not(:last-child){
+    border-bottom: 1px solid #eee;
+}
+
+.yes::before,
+.no::before,
+.info::after{
+    position: absolute;
+    height: 18px;
+    width: 18px;  
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px; 
+    font-weight: bold;
+}
+
+.yes::before,
+.no::before{
+    top: -2px;
+    left: 10px;
+}
+
+.yes::before{
+    content: "\2713";
+    background-color: #009688;
+}
+
+.no::before{
+    content: "X";
+    background-color: #E91E63;
+}
+
+.info{
+    position: relative;
+}
+
+.info::after{
+    content: "?";
+    top: -6px;
+    right: 10px;
+    background-color: #7E7E7E;
+}
+
+
