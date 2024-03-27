@@ -1,0 +1,174 @@
+:root{
+    --green-color: #009688;
+    --border-color: #cecbcb;
+    --padding: 20px;
+    --gap: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.object{
+    width: 1000px;
+    background-color: #f5f5f5;
+    margin: 100px auto;
+    padding: var(--padding) var(--padding) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.object>div{
+    width: 100%;
+    background-color: white;
+    padding: var(--padding);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.object>div:not(:last-child):after{
+    content: "";
+    position: absolute;
+    bottom:-15px;
+    left:0;
+    width: 100%;
+    height: 0.5px;
+    background-color: #eee;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 28% 72%;
+}
+
+.header>div{
+    padding: 0 var(--padding);
+}
+
+.header img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px 7px rgb(244 168 189 / 53%);
+}
+
+.dataL{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2;
+}
+
+.level{
+    font-size: 20px;
+}
+
+.progress{
+    width: 100%;
+    height:15px;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, var(--green-color) 70%,#f1f1f1 70%, #f1f1f1 100%);
+}
+
+.num{
+    color: var(--green-color);
+    font-weight: bold;
+}
+
+.dataR{
+    line-height: 2.25;
+    position: relative;
+}
+
+.dataR::before{
+    content:"";
+    position: absolute;
+    width: 1px;
+    height: calc(100% + var(--padding) * 2);
+    background-color: var(--border-color);
+    top: calc(-1 * var(--padding));
+    left: 0;
+}
+
+.dataR::after{
+    content:"140 Days in The Ship";
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+}
+
+.object>div:not(:first-child){
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+
+.points div:not(:last-child),
+.your-power div:not(:last-child){
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h2{
+    width: fit-content;
+    padding: 10px;
+    background-color: #607D8B;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.type{
+    font-weight: 800;
+    color: rgb(251, 55, 88);
+}
+
+
+.trophies img{
+    width: 83px;
+    height: 80px;
+    border: 1px solid black;
+    background-color: #f5f5f5;
+}
+
+.trophies .images{
+    display:flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.ladder-news .from{
+    color: rgb(251, 55, 88);
+    font-weight: bold;
+}
+
+.ladder-news .to{
+    color: rgb(47, 158, 232);
+    font-weight: bold;
+}
+
+.your-power .case{
+    position: relative;
+}
+
+.your-power .case::after{
+    position: absolute;
+    font-weight: bold;
+    top: 0;
+    right: 0;
+}
+
+.your-power .case.yes::after{
+    content: "Yes";
+    color:green;
+}
+
+.your-power .case.no::after{
+    content: "No";
+    color:red;
+}
