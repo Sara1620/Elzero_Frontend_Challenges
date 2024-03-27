@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #f6f6f6;
+}
+
+.container{
+    margin: 200px auto;
+    width: 950px;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0px 0px 20px;
+    background-color: white;
+    position: relative;
+}
+
+.container::before{
+    position: absolute;
+    content: "Featured Products";
+    padding: 10px 20px;
+    background-color: #316878;
+    top: 0px;
+    left: -20px;
+    color: white; 
+    font-size: 20px;
+}
+
+.container .card{
+    border: 8px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: relative;
+}
+
+.container .card::after{
+    position: absolute;
+    content: "";
+    width: 96%;
+    height: 2px;
+    bottom: 20px;
+    left: 2%;
+    background-color: #e2e2e2;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.container .card .title{
+    position: relative;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.container .card .cost{ 
+    padding: 0 8px; /*For the white space*/
+    color: #316878;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.sale-card{
+    position: relative;
+}
+
+.container .sale-card .cost{
+    color: tomato !important;
+}
+
+.container .sale-card del{
+    color: #aaa !important;
+    font-weight: normal !important;
+    font-size: 14px;
+}
+
+.sale-card::before{
+    content: "Sale!";
+    position: absolute;
+    color: white;
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    left: -20px;
+    border-radius: 50%;
+    background-color: #E64602;
+    line-height: 50px;
+    text-align: center;
+}
+
