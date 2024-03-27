@@ -1,0 +1,165 @@
+.container{
+    margin: 0 20px;
+    font-family: sans-serif;
+}
+
+.container div{
+    width: 200px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    /* border-bottom-width: 3px;
+    border-bottom-style: solid; */
+    position: relative;
+} 
+
+/*Colors and bottom borders - no pseudo elements*/
+/* .blue{
+    color:blue;
+    border-image: linear-gradient(to right, blue 50%, #eee 50%, #eee 100%)1; 
+
+}
+
+.green{
+    color:green;
+    border-image: linear-gradient(to right, green 50%, #eee 50%, #eee 100%)1; 
+}
+
+.red{
+    color:red;
+    border-image: linear-gradient(to right, red 50%, #eee 50%, #eee 100%)1; 
+}
+
+.orange{
+    color:#CD661A;
+    border-image: linear-gradient(to right, #CD661A 50%, #eee 50%, #eee 100%)1; 
+} */
+
+/*With pseudo elements*/
+.container div::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    bottom: 0px;
+    left: 0;
+}
+
+
+.blue{
+    color:blue;
+}
+
+.container .blue::after{
+    border-image: linear-gradient(to right, blue 50%, #eee 50%, #eee 100%)1; 
+}
+
+.green{
+    color:green;
+}
+
+.container .green::after{
+    border-image: linear-gradient(to right, green 50%, #eee 50%, #eee 100%)1; 
+}
+
+.red{
+    color:red;
+}
+
+.container .red::after{ 
+    border-image: linear-gradient(to right, red 50%, #eee 50%, #eee 100%)1; 
+}
+
+.orange{
+    color:#CD661A;
+}
+
+.container .orange::after{
+    border-image: linear-gradient(to right, #CD661A 50%, #eee 50%, #eee 100%)1; 
+}
+
+/*******Shapes********/
+
+.circle::before,
+.box::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: -5px;
+    left: -1px; 
+}
+
+.circle::before{ 
+    border-radius: 50%;
+}
+
+.circle.blue::before, 
+.box.blue::before{
+    background-color: blue;
+}
+
+.circle.red::before, 
+.box.red::before{
+    background-color: red;
+}
+
+.circle.green::before, 
+.box.green::before{
+    background-color: green;
+}
+
+.circle.orange::before, 
+.box.orange::before{
+    background-color: #CD661A;
+}
+
+/****Triangle******/
+.Triangle-up::before,
+.Triangle-down::before{
+    content: "";
+    position: absolute;
+    border-width: 8px;
+    border-style: solid;
+    left: 0px; 
+}
+
+.Triangle-up::before{
+    bottom: 2px;
+}
+
+.Triangle-up.blue::before{
+    border-color: transparent transparent blue;
+}
+
+.Triangle-up.red::before{
+    border-color: transparent transparent red;
+
+}
+.Triangle-up.green::before{
+    border-color: transparent transparent green;
+    
+}
+.Triangle-up.orange::before{
+    border-color: transparent transparent #CD661A; 
+}
+
+.Triangle-down::before{
+    bottom: -16px;
+}
+
+.Triangle-down.blue::before{
+    border-color: blue transparent transparent;
+}
+
+.Triangle-down.red::before{
+    border-color:  red transparent transparent;
+
+}
+.Triangle-down.green::before{
+    border-color: green transparent transparent;
+    
+}
+.Triangle-down.orange::before{
+    border-color: #CD661A transparent transparent; 
+}
