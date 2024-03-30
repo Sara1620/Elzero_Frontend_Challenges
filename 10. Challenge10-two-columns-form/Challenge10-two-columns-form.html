@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="Challenge10-two-columns-form.css" rel="stylesheet">
+</head>
+<body> 
+
+    <form>
+        <div class="data">
+            <div class="user-name">
+                <label for="user-name" class="required">Username</label>
+                <input id="user-name" placeholder="Type Your Name In English Only" required>
+            </div>
+
+            <div class="password">
+                <label for="password" class="required">Password</label>
+                <input id="password" placeholder="Type a Complex Password" type="password" required>
+            </div>
+
+            <div class="email">
+                <label for="email" class="required">Email</label>
+                <input id="email" placeholder="Type a Valid Email" type="email" required>
+            </div>
+
+            <div class="phone">
+                <label for="phone">Phone</label>
+                <input id="phone" type="tel">
+            </div>
+
+            <div class="brief">
+                <label for="brief">Brief</label>
+                <textarea id="brief" ></textarea>
+            </div>
+        </div>
+        <input class="register-button" type="submit" value="Register">
+    </form>
+</body>
+</html>
+
