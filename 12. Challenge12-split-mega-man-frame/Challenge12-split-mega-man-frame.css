@@ -1,0 +1,28 @@
+div{
+    margin: 200px auto;
+    width: 500px;
+    height: 350px;
+    background-image: linear-gradient(to right, white 50%, #343A40 50%); 
+    position: relative;
+}
+
+div::before{ /*To have div with sharp corners, and rounded border randius*/
+    content: "";
+    position: absolute;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    top: -20px;
+    left: -20px;
+    background-image: linear-gradient(to right, #343A40 50%, white  50%);
+    border-radius: 15px;
+    z-index: -1;
+}
+
+img{
+    width: 300px; 
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    transform: translateX(-50%);
+}
